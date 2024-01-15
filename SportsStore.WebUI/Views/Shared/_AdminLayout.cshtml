@@ -4,9 +4,18 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="~/Content/Admin.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 </head>
 <body>
     <div>
+        @if (TempData["message"] != null)
+        {
+            <div class="Message">
+                @TempData["message"]
+            </div>
+        }
         @RenderBody()
     </div>
 </body>
